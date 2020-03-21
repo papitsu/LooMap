@@ -18,5 +18,9 @@ class SettingsActivity: AppCompatActivity() {
             startActivity(Intent(applicationContext, StatsActivity::class.java))
             finish()
         }
+
+        view_toilet_button.setOnClickListener {
+            startActivity(Intent(applicationContext, ToiletActivity::class.java))
+        }
     }
 }

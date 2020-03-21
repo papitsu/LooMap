@@ -5,16 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import kotlinx.android.synthetic.main.row_stats.view.*
+import kotlinx.android.synthetic.main.row_toilet_visit.view.*
 
-class StatsAdapter(context: Context, private val list: Array<String>) : BaseAdapter() {
+class VisitsAdapter(context: Context, private val list: Array<String>) : BaseAdapter() {
 
     private val inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val row = inflater.inflate(R.layout.row_stats, parent, false)
-        row.statName.text = list[position]
-        row.statValue.text = "1337"
+        val row = inflater.inflate(R.layout.row_toilet_visit, parent, false)
+        row.visitTime.text = list[position]
+        row.visitRating.rating = 3.7.toFloat()
         return row
     }
 

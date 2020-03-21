@@ -29,6 +29,10 @@ class ToiletActivity: AppCompatActivity() {
             startActivity(Intent(applicationContext, AddVisitActivity::class.java))
         }
 
+        val data = arrayOf("Toilets visited", "Total visits", "Average visits per month", "Additional stat", "One more stat", "Yet another stat", "One can't have too many stats", "I like stats", "Can there be any more stats", "Yes there can", "Shouldn't these end at some point?", "Won't somebody please end these stats", "This is the last stat", "Just kidding")
+        val visitsAdapter = VisitsAdapter(applicationContext, data)
+        lv_toilet_visits.adapter = visitsAdapter
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -39,6 +39,27 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+
+
+
+    <Button
+        android:id="@+id/view_toilet_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View toilet"
+        app:layout_constraintBottom_toTopOf="@+id/divider3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+
+
+
+
+
+
+
     <View
         android:id="@+id/divider3"
         android:layout_width="match_parent"

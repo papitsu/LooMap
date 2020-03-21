@@ -21,10 +21,6 @@ class StatsActivity: AppCompatActivity() {
             finish()
         }
 
-        view_toilet_button.setOnClickListener {
-            startActivity(Intent(applicationContext, ToiletActivity::class.java))
-        }
-
         val data = arrayOf("Toilets visited", "Total visits", "Average visits per month", "Additional stat", "One more stat", "Yet another stat", "One can't have too many stats", "I like stats", "Can there be any more stats", "Yes there can", "Shouldn't these end at some point?", "Won't somebody please end these stats", "This is the last stat", "Just kidding")
         val statsAdapter = StatsAdapter(applicationContext, data)
         stats_list_view.adapter = statsAdapter
