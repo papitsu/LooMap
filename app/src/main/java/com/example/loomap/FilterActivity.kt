@@ -3,9 +3,10 @@ package com.example.loomap
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.MultiSelectListPreference
 import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.PreferenceManager
 import kotlinx.android.synthetic.main.activity_filter.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class FilterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +21,8 @@ class FilterActivity : AppCompatActivity() {
             .beginTransaction()
             .replace(R.id.filter_settings_fragment, FilterPreferenceFragment())
             .commit()
+
+        PreferenceManager.setDefaultValues(this, R.xml.filter_settings, true)
     }
 
     class FilterPreferenceFragment : PreferenceFragmentCompat() {
@@ -27,4 +30,7 @@ class FilterActivity : AppCompatActivity() {
             setPreferencesFromResource(R.xml.filter_settings, rootKey)
         }
     }
+
+
+
 }

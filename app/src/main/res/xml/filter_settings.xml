@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    
     app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-    <Preference
-        app:key="rating_filter"
-        app:summary="Filter toilets based on their average rating"
-        app:title="Filter by rating" />
+    <SwitchPreferenceCompat
+        android:id="@+id/filter_private"
+        android:defaultValue="true"
+        app:key="filter_private"
+        app:summary="Includes private toilets in the results"
+        app:title="Show private toilets" />
 
     <Preference
-        app:key="category_filter"
-        app:summary="Filter toilets based on their category"
-        app:title="Filter by category" />
-
-    <Preference
+        android:id="@+id/filter_distance"
         app:key="distance_filter"
-        app:summary="Filter toilets based on their distance"
+        app:summary="Filter results by distance"
         app:title="Filter by distance" />
+
+    <MultiSelectListPreference
+        android:id="@+id/filter_category"
+        android:defaultValue="@array/pref_category_values"
+        android:dialogTitle="Show categories"
+        android:entries="@array/pref_category_entries"
+        android:entryValues="@array/pref_category_values"
+        android:key="Show categories"
+        android:summary="Public, Private"
+        android:title="Show categories" />
 
 </PreferenceScreen>
