@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/edit_toilet_menu_action"
+        android:title="Edit"/>
+    <item
+        android:id="@+id/add_photos_menu_action"
+        android:title="Add photos"/>
+    <item
+        android:id="@+id/delete_toilet_menu_action"
+        android:title="Delete"/>
+
+</menu>
