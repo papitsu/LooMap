@@ -12,25 +12,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VisitActivity"></activity>
-        <activity android:name=".EditToiletActivity" />
-        <activity android:name=".EditVisitActivity" />
+        <activity android:name="com.example.loomap.VisitActivity"></activity>
+        <activity android:name="com.example.loomap.EditToiletActivity" />
+        <activity android:name="com.example.loomap.EditVisitActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.loomap.MainActivity"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddToiletActivity" />
-        <activity android:name=".AddVisitActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".StatsActivity" />
-        <activity android:name=".ToiletActivity" />
-        <activity android:name=".ToiletsActivity" />
-        <activity android:name=".VisitsActivity" />
-        <activity android:name=".FilterActivity" />
+        <activity android:name="com.example.loomap.AddToiletActivity" />
+        <activity android:name="com.example.loomap.AddVisitActivity" />
+        <activity android:name="com.example.loomap.SettingsActivity" />
+        <activity android:name="com.example.loomap.StatsActivity" />
+        <activity android:name="com.example.loomap.ToiletActivity" />
+        <activity android:name="com.example.loomap.ToiletsActivity" />
+        <activity android:name="com.example.loomap.VisitsActivity" />
+        <activity android:name="com.example.loomap.FilterActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

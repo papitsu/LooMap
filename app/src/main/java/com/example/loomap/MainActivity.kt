@@ -176,7 +176,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
         val builder = AlertDialog.Builder(this)
 
         builder.setTitle("Select categories")
-        builder.setMultiChoiceItems(items, null) { dialog, which, isChecked ->
+        builder.setMultiChoiceItems(items, null) { _, which, isChecked ->
             if (isChecked) {
                 selectedList.add(which)
             } else if (selectedList.contains(which)) {
