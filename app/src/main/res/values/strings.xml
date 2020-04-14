@@ -1,3 +1,50 @@
 <resources>
     <string name="app_name">LooMap</string>
+
+    <string name="add_toilet_title">Add toilet</string>
+    <string name="toilet_name_hint">Name</string>
+    <string name="toilet_description_hint">Description</string>
+    <string name="category_label">Category</string>
+    <string name="category_label_private">Private</string>
+    <string name="category_label_public">Public</string>
+    <string name="save_button_label">Save</string>
+
+    <string name="add_visit_title">Add visit</string>
+    <string name="add_visit_toilet_name_hint">Toilet</string>
+    <string name="add_visit_comment_hint">Comment</string>
+    <string name="add_visit_time_hint">Time</string>
+    <string name="rating_label">Rating</string>
+    <string name="photo_label">Photo</string>
+
+    <string name="edit_visit_title">Edit visit</string>
+    <string name="edit_toilet_title">Edit toilet</string>
+
+    <string name="filter_title">Filter</string>
+    <string name="apply_filter_label">Apply filter</string>
+    <string name="clear_label">Clear</string>
+
+    <string name="add_toilet_label">Add toilet</string>
+    <string name="settings_title">Settings</string>
+    <string name="stats_title">Stats</string>
+
+    <string name="toilet_title">Toilet</string>
+    <string name="toilet_name_placeholder">Toilet name</string>
+    <string name="toilet_description_placeholder">Toilet description</string>
+    <string name="visits_label">Visits</string>
+    <string name="add_visit_label">Add visit</string>
+
+    <string name="toilets_title">Toilets</string>
+    <string name="visit_title">Visit</string>
+    <string name="visit_time_placeholder">24/04/2017, 10:30</string>
+    <string name="visit_comment_placeholder">Visit comment</string>
+
+    <string name="edit_label">Edit</string>
+    <string name="delete_label">Delete</string>
+    <string name="add_photos_label">Add photos</string>
+
+    // Used in the Kotlin code
+    <string name="no_toilets">No toilets in the database</string>
+    <string name="search_hint">Search toilets</string>
+    <string name="new_toilet_snippet">Add a new toilet</string>
+    <string name="toilet_name_string">%1$s (%2$s)</string>
 </resources>

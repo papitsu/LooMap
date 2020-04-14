@@ -4,104 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/ThemeOverlay.AppCompat.Light"
     tools:context=".ToiletActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/barColor"
+        android:elevation="4dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="?attr/homeAsUpIndicator">
-
-        <TextView
-            android:id="@+id/logo_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:background="@null"
-            android:fontFamily="sans-serif-medium"
-            android:text="TOILET INFO"
-            android:textColor="#FFFFFF" />
-
-    </androidx.appcompat.widget.Toolbar>
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="@string/toilet_title" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        app:layout_constraintTop_toBottomOf="@id/main_toolbar">
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/toilet_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Joni's toilet (private)"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:text="@string/toilet_name_placeholder"
             android:textAlignment="center"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
 
+        <!--
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/toilet_image"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:src="@mipmap/test_toilet_img_foreground" />
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/test_toilet_img" />
+        -->
+
+        <fragment
+            android:id="@+id/map_fragment_view_toilet"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:adjustViewBounds="true" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/toilet_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Spacious but dirty"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/toilet_description_placeholder"
             android:textAlignment="center"
-            android:textSize="18dp" />
+            android:textSize="16sp" />
 
         <com.iarcuschin.simpleratingbar.SimpleRatingBar
             android:id="@+id/star_toilet_rating"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srb_borderColor="@color/colorPrimaryDark"
-            app:srb_fillColor="@color/colorPrimary"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:srb_borderColor="@color/colorAccent"
+            app:srb_fillColor="@color/colorAccent"
             app:srb_numberOfStars="5"
-            app:srb_rating="3.65"
             app:srb_starSize="30dp"
-            app:srb_stepSize="0.5" />
+            app:srb_stepSize="0.5"
+            app:srb_isIndicator="true"/>
 
 
         <TextView
             android:id="@+id/tv_visits_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:text="Visits" />
+            android:layout_marginEnd="20dp"
+            android:text="@string/visits_label"
+            app:liftOnScroll="true" />
 
         <ListView
             android:id="@+id/lv_toilet_visits"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="80dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:clipToPadding="false"
+            android:paddingBottom="100dp"
             android:scrollbars="vertical" />
 
     </LinearLayout>
 
-    <Button
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/add_visit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Add visit"
-        android:textColor="#FFFFFF"
+        android:layout_margin="32dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/add_visit_label"
+        app:elevation="10dp"
+        app:icon="@drawable/ic_add_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/menu_filter_rating"
-        android:title="Rating"
-        />
-    <item
-        android:id="@+id/menu_filter_category"
-        android:title="Category"
-        />
-    <item
-        android:id="@+id/menu_filter_distance"
-        android:title="Distance"
-        />
+        android:id="@+id/clear_filter"
+        android:icon="@drawable/ic_clear_black_24dp"
+        android:title="@string/clear_label"
+        app:showAsAction="always" />
 </menu>

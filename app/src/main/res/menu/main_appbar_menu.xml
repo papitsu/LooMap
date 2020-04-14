@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/main_menu_filter"
+        android:icon="@drawable/ic_filter_list_black_24dp"
+        android:title="Filter" />
+    <item
+        android:id="@+id/main_menu_stats"
+        android:icon="@drawable/ic_assessment_black_24dp"
+        android:title="Stats" />
+    <item
+        android:id="@+id/main_menu_toilets"
+        android:title="Toilets" />
+    <item
+        android:id="@+id/main_menu_visits"
+        android:title="Visits" />
+    <item
+        android:id="@+id/main_menu_settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="Settings" />
+    <item
+        android:id="@+id/app_bar_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always|collapseActionView" />
+</menu>

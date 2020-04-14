@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/edit_toilet_menu_action"
-        android:title="Edit"/>
+        android:title="@string/edit_label" />
     <item
         android:id="@+id/add_photos_menu_action"
-        android:title="Add photos"/>
+        android:title="@string/add_photos_label" />
     <item
         android:id="@+id/delete_toilet_menu_action"
-        android:title="Delete"/>
+        android:title="@string/delete_label" />
 
 </menu>
