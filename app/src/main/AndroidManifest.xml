@@ -30,7 +30,6 @@
         <activity android:name="com.example.loomap.ToiletActivity" />
         <activity android:name="com.example.loomap.ToiletsActivity" />
         <activity android:name="com.example.loomap.VisitsActivity" />
-        <activity android:name="com.example.loomap.FilterActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

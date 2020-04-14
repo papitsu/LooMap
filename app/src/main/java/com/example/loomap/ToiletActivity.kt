@@ -169,7 +169,6 @@ class ToiletActivity : AppCompatActivity(), OnMapReadyCallback {
         val id = item.itemId
 
         if (id == R.id.edit_toilet_menu_action) {
-            toast("Clicked edit toilet!")
 
             val editIntent = Intent(applicationContext, EditToiletActivity::class.java)
                 .putExtra("uid", toiletId)
@@ -188,7 +187,6 @@ class ToiletActivity : AppCompatActivity(), OnMapReadyCallback {
             return true
         }
         if (id == R.id.delete_toilet_menu_action) {
-            toast("Clicked delete toilet!")
             deleteToiletAlert()
             return true
 

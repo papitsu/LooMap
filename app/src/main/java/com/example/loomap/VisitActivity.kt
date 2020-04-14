@@ -76,7 +76,6 @@ class VisitActivity : AppCompatActivity() {
         val id = item.itemId
 
         if (id == R.id.edit_visit_menu_action) {
-            toast("Clicked edit visit!")
 
             intent = Intent(applicationContext, EditVisitActivity::class.java)
                 .putExtra("uid", visitId)

@@ -77,7 +77,6 @@ class EditVisitActivity : AppCompatActivity() {
         }
 
         inputTime.setOnClickListener {
-            toast("Clicked!")
             pickDateTime()
         }
     }

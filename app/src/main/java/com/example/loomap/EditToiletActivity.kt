@@ -101,8 +101,8 @@ class EditToiletActivity : AppCompatActivity(), OnMapReadyCallback {
         if (toiletLocation != null) {
             val tempLocation: LatLng = toiletLocation!!
             with(gMap) {
-                moveCamera(com.google.android.gms.maps.CameraUpdateFactory.newLatLngZoom(tempLocation, 13f))
-                addMarker(com.google.android.gms.maps.model.MarkerOptions().position(tempLocation))
+                moveCamera(CameraUpdateFactory.newLatLngZoom(tempLocation, 13f))
+                addMarker(MarkerOptions().position(tempLocation))
             }
         }
 
@@ -170,7 +170,6 @@ class EditToiletActivity : AppCompatActivity(), OnMapReadyCallback {
         val id = item.itemId
 
         if (id == R.id.delete_toilet_from_edit_menu) {
-            toast("Clicked delete toilet!")
             deleteToiletAlert()
         }
         return true

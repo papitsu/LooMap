@@ -304,7 +304,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
         checkLocationPermissions()
         if (checkLocation() && gMap.isMyLocationEnabled) {
             fusedLocationClient.lastLocation.addOnCompleteListener(this) {
-                var location: Location? = it.result
+                val location: Location? = it.result
                 if (location == null) {
                     requestNewLocationData()
                 } else {
@@ -316,7 +316,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
     }
 
     private fun requestNewLocationData() {
-        var locationRequest = LocationRequest()
+        val locationRequest = LocationRequest()
         locationRequest.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
         locationRequest.interval = 0
         locationRequest.fastestInterval = 0
@@ -330,7 +330,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
 
     private val locationCallback = object : LocationCallback() {
         override fun onLocationResult(locationResult: LocationResult) {
-            var lastLocation: Location = locationResult.lastLocation
+            val lastLocation: Location = locationResult.lastLocation
             currentLatitude = lastLocation.latitude
             currentLongitude = lastLocation.longitude
         }
@@ -467,10 +467,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
         // Handle action bar item clicks here.
         val id = item.itemId
 
-        if (id == R.id.main_menu_filter) {
-            startActivity(Intent(applicationContext, FilterActivity::class.java))
-            return true
-        }
         if (id == R.id.main_menu_toilets) {
             startActivity(Intent(applicationContext, ToiletsActivity::class.java))
             return true
@@ -587,7 +583,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                     description = "nelkki",
                     name = "Testi 4"
                 )
-                var lastToiletId = db.toiletDao().insert(toilet).toInt()
+                val lastToiletId = db.toiletDao().insert(toilet).toInt()
 
                 val format = SimpleDateFormat("yyyy-MM-dd HH:mm")
 
@@ -673,7 +669,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                         }
                     }
                 } else {
-                    toast(getString(R.string.no_toilets))
                     gMap.clear()
                 }
             }

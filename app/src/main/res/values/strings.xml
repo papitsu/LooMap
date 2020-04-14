@@ -19,9 +19,8 @@
     <string name="edit_visit_title">Edit visit</string>
     <string name="edit_toilet_title">Edit toilet</string>
 
-    <string name="filter_title">Filter</string>
-    <string name="apply_filter_label">Apply filter</string>
-    <string name="clear_label">Clear</string>
+    <string name="filter_title">Filters</string>
+    <string name="clear_label">Clear all</string>
 
     <string name="add_toilet_label">Add toilet</string>
     <string name="settings_title">Settings</string>

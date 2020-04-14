@@ -3,10 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/main_menu_filter"
-        android:icon="@drawable/ic_filter_list_black_24dp"
-        android:title="Filter" />
-    <item
         android:id="@+id/main_menu_stats"
         android:icon="@drawable/ic_assessment_black_24dp"
         android:title="Stats" />

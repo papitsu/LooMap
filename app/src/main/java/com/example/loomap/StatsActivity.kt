@@ -51,6 +51,9 @@ class StatsActivity : AppCompatActivity() {
 
     private fun calculateStats() {
         if (visits.isNotEmpty()) {
+            labels.clear()
+            values.clear()
+
             labels.add("Toilets visited")
             values.add(toilets.count())
 

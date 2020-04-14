@@ -83,7 +83,6 @@ class AddVisitActivity : AppCompatActivity() {
         }
 
         inputTime.setOnClickListener {
-            toast("Clicked!")
             pickDateTime()
         }
     }
