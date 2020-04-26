@@ -253,7 +253,7 @@ class SettingsActivity : AppCompatActivity() {
 
             visit = Visit(
                 null,
-                time = format.parse("2020-10-03 20:22")!!.time,
+                time = format.parse("2019-10-03 20:22")!!.time,
                 toiletId = lastToiletId,
                 comment = "Out of soap.",
                 rating = 2.5.toFloat(),
@@ -263,7 +263,7 @@ class SettingsActivity : AppCompatActivity() {
 
             visit = Visit(
                 null,
-                time = format.parse("2020-10-10 20:22")!!.time,
+                time = format.parse("2019-10-10 20:22")!!.time,
                 toiletId = lastToiletId,
                 comment = "Out of soap.",
                 rating = 2.5.toFloat(),
@@ -273,7 +273,7 @@ class SettingsActivity : AppCompatActivity() {
 
             visit = Visit(
                 null,
-                time = format.parse("2020-10-17 20:22")!!.time,
+                time = format.parse("2019-10-17 20:22")!!.time,
                 toiletId = lastToiletId,
                 comment = "Out of soap.",
                 rating = 2.5.toFloat(),
@@ -283,7 +283,7 @@ class SettingsActivity : AppCompatActivity() {
 
             visit = Visit(
                 null,
-                time = format.parse("2020-10-24 20:22")!!.time,
+                time = format.parse("2019-10-24 20:22")!!.time,
                 toiletId = lastToiletId,
                 comment = "The got soap!",
                 rating = 3.5.toFloat(),
@@ -293,7 +293,7 @@ class SettingsActivity : AppCompatActivity() {
 
             visit = Visit(
                 null,
-                time = format.parse("2020-10-31 20:22")!!.time,
+                time = format.parse("2019-10-31 20:22")!!.time,
                 toiletId = lastToiletId,
                 comment = "Out of soap, again.",
                 rating = 2.5.toFloat(),
@@ -303,7 +303,7 @@ class SettingsActivity : AppCompatActivity() {
 
             visit = Visit(
                 null,
-                time = format.parse("2020-11-07 20:22")!!.time,
+                time = format.parse("2019-11-07 20:22")!!.time,
                 toiletId = lastToiletId,
                 comment = "Out of soap.",
                 rating = 2.5.toFloat(),
@@ -313,7 +313,7 @@ class SettingsActivity : AppCompatActivity() {
 
             visit = Visit(
                 null,
-                time = format.parse("2020-11-14 20:22")!!.time,
+                time = format.parse("2019-11-14 20:22")!!.time,
                 toiletId = lastToiletId,
                 comment = "Out of soap.",
                 rating = 2.5.toFloat(),
@@ -323,7 +323,7 @@ class SettingsActivity : AppCompatActivity() {
 
             visit = Visit(
                 null,
-                time = format.parse("2020-11-21 20:22")!!.time,
+                time = format.parse("2019-11-21 20:22")!!.time,
                 toiletId = lastToiletId,
                 comment = "Out of soap.",
                 rating = 2.5.toFloat(),
@@ -333,7 +333,7 @@ class SettingsActivity : AppCompatActivity() {
 
             visit = Visit(
                 null,
-                time = format.parse("2020-11-28 20:22")!!.time,
+                time = format.parse("2019-11-28 20:22")!!.time,
                 toiletId = lastToiletId,
                 comment = "Out of soap.",
                 rating = 2.5.toFloat(),
@@ -343,7 +343,7 @@ class SettingsActivity : AppCompatActivity() {
 
             visit = Visit(
                 null,
-                time = format.parse("2020-11-28 20:22")!!.time,
+                time = format.parse("2019-12-5 20:22")!!.time,
                 toiletId = lastToiletId,
                 comment = "Out of soap.",
                 rating = 2.5.toFloat(),
@@ -351,7 +351,67 @@ class SettingsActivity : AppCompatActivity() {
             )
             db.visitDao().insert(visit)
 
+            visit = Visit(
+                null,
+                time = format.parse("2019-12-12 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap.",
+                rating = 2.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
 
+            visit = Visit(
+                null,
+                time = format.parse("2019-12-19 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap.",
+                rating = 2.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-01-09 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap.",
+                rating = 2.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-01-16 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap.",
+                rating = 2.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-01-23 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap.",
+                rating = 2.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-01-30 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap.",
+                rating = 2.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            
 
             toilet = Toilet(
                 null,
