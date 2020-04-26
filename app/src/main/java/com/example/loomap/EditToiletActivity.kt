@@ -13,6 +13,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.activity_edit_toilet.*
@@ -102,7 +103,10 @@ class EditToiletActivity : AppCompatActivity(), OnMapReadyCallback {
             val tempLocation: LatLng = toiletLocation!!
             with(gMap) {
                 moveCamera(CameraUpdateFactory.newLatLngZoom(tempLocation, 13f))
-                addMarker(MarkerOptions().position(tempLocation))
+                addMarker(MarkerOptions()
+                    .position(tempLocation)
+                    .icon(BitmapDescriptorFactory.defaultMarker(getString(R.string.marker_color).toFloat()))
+                )
             }
         }
 
@@ -110,7 +114,10 @@ class EditToiletActivity : AppCompatActivity(), OnMapReadyCallback {
             with(gMap) {
                 clear()
                 animateCamera(CameraUpdateFactory.newLatLng(location))
-                addMarker(MarkerOptions().position(location))
+                addMarker(MarkerOptions()
+                    .position(location)
+                    .icon(BitmapDescriptorFactory.defaultMarker(getString(R.string.marker_color).toFloat()))
+                )
 
                 toiletLocation = location
             }

@@ -73,10 +73,10 @@
             android:layout_marginEnd="20dp"
             app:srb_borderColor="@color/colorAccent"
             app:srb_fillColor="@color/colorAccent"
+            app:srb_isIndicator="true"
             app:srb_numberOfStars="5"
             app:srb_starSize="30dp"
-            app:srb_stepSize="0.5"
-            app:srb_isIndicator="true"/>
+            app:srb_stepSize="0.5" />
 
 
         <TextView
@@ -108,8 +108,10 @@
         android:layout_margin="32dp"
         android:backgroundTint="@color/colorAccent"
         android:text="@string/add_visit_label"
+        android:textColor="@color/white"
         app:elevation="10dp"
         app:icon="@drawable/ic_add_black_24dp"
+        app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

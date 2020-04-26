@@ -51,8 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/test_toilet_img" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/toilet_paper" />
 
         <TextView
             android:id="@+id/visit_comment"
@@ -78,8 +78,6 @@
             app:srb_starSize="30dp"
             app:srb_stepSize="0.5"
             app:srb_isIndicator="true"/>
-
-
 
     </LinearLayout>
 

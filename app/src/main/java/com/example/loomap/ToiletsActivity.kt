@@ -29,7 +29,9 @@ class ToiletsActivity : AppCompatActivity() {
         doAsync {
             val db = Room.databaseBuilder(applicationContext, AppDatabase::class.java, "app_database")
                 .build()
-            val toilets = db.toiletDao().getAllToilets()
+            var toilets = db.toiletDao().getAllToilets()
+            toilets = toilets.sortedWith(compareBy { it.name })
+
             var ratings: MutableList<Float?> = mutableListOf()
 
             if (toilets.isNotEmpty()) {

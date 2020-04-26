@@ -23,12 +23,14 @@ import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import androidx.room.Room
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
@@ -59,7 +61,8 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
 
     var categoryFilter: String? = null // Can be "Private" or "Public"
     var ratingFilter: Float? = null // Can be between 0 and 5
-    var distanceFilter: Float? = null // Can be between 0 km and Inf km
+    var distanceFilter: Float? = null // Can be between 0 km and Inf
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -103,18 +106,21 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
         clear_category_filter.setOnClickListener {
             categoryFilter = null
             category_filter_info.text = "-"
+            DrawableCompat.setTint(clear_category_filter.drawable, ContextCompat.getColor(applicationContext, R.color.white))
             conditionalClearFilters()
         }
 
         clear_rating_filter.setOnClickListener {
             ratingFilter = null
             rating_filter_info.text = "-"
+            DrawableCompat.setTint(clear_rating_filter.drawable, ContextCompat.getColor(applicationContext, R.color.white))
             conditionalClearFilters()
         }
 
         clear_distance_filter.setOnClickListener {
             distanceFilter = null
             distance_filter_info.text = "-"
+            DrawableCompat.setTint(clear_distance_filter.drawable, ContextCompat.getColor(applicationContext, R.color.white))
             conditionalClearFilters()
         }
 
@@ -149,6 +155,10 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
             ratingFilter = null
             distanceFilter = null
             conditionalClearFilters()
+            DrawableCompat.setTint(clear_distance_filter.drawable, ContextCompat.getColor(applicationContext, R.color.white))
+            DrawableCompat.setTint(clear_category_filter.drawable, ContextCompat.getColor(applicationContext, R.color.white))
+            DrawableCompat.setTint(clear_rating_filter.drawable, ContextCompat.getColor(applicationContext, R.color.white))
+
         }
     }
 
@@ -196,7 +206,9 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
 
             if (categoryFilter == null) {
                 category_filter_info.text = "-"
+                DrawableCompat.setTint(clear_category_filter.drawable, ContextCompat.getColor(applicationContext, R.color.white))
             } else {
+                DrawableCompat.setTint(clear_category_filter.drawable, ContextCompat.getColor(applicationContext, R.color.gray))
                 category_filter_info.text = categoryFilter
                 maximizeClearFiltersButton()
                 refreshMap()
@@ -232,6 +244,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
 
             if (!isValid) {
                 val errorBuilder = AlertDialog.Builder(this)
+                DrawableCompat.setTint(clear_rating_filter.drawable, ContextCompat.getColor(applicationContext, R.color.white))
 
                 with(errorBuilder)
                 {
@@ -244,6 +257,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                 // If all validations went well, here we finally do the actual stuff!
                 ratingFilter = num
                 rating_filter_info.text = "Minimum rating: $ratingFilter stars"
+                DrawableCompat.setTint(clear_rating_filter.drawable, ContextCompat.getColor(applicationContext, R.color.gray))
                 maximizeClearFiltersButton()
                 refreshMap()
                 dialog.dismiss()
@@ -279,6 +293,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
 
             if (!isValid) {
                 val errorBuilder = AlertDialog.Builder(this)
+                DrawableCompat.setTint(clear_distance_filter.drawable, ContextCompat.getColor(applicationContext, R.color.white))
 
                 with(errorBuilder)
                 {
@@ -289,6 +304,8 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                 }
             } else {
                 // If all validations went well, here we finally do the actual stuff!
+                DrawableCompat.setTint(clear_distance_filter.drawable, ContextCompat.getColor(applicationContext, R.color.gray))
+
                 distanceFilter = num
                 distance_filter_info.text = "Maximum distance: $distanceFilter km"
                 maximizeClearFiltersButton()
@@ -544,7 +561,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                     listOfToiletNames.add(toilet.name)
                 }
             }
-
+            /*
             if (db.toiletDao().getAllToilets().isEmpty()) {
 
                 // Add sample words.
@@ -648,6 +665,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                 db.visitDao().insert(visit)
 
             }
+            */
             db.close()
 
             uiThread {
@@ -663,6 +681,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                                         )
                                     )
                                     .title(toilet.name)
+                                    .icon(BitmapDescriptorFactory.defaultMarker(getString(R.string.marker_color).toFloat()))
                             )
                             marker.tag = toilet.uid!!.toInt()
                             listOfMarkers.add(marker)
@@ -765,6 +784,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                     addMarker(
                         MarkerOptions().position(location)
                             .title(getString(R.string.new_toilet_snippet))
+                            .icon(BitmapDescriptorFactory.defaultMarker(getString(R.string.marker_color).toFloat()))
                     )
                 tempMarker.showInfoWindow()
 

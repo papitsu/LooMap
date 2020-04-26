@@ -5,7 +5,6 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities = [
-        Stat::class,
         Toilet::class,
         Visit::class,
         Photo::class
@@ -14,7 +13,6 @@ import androidx.room.RoomDatabase
 )
 
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun statDao(): StatDao
     abstract fun visitDao(): VisitDao
     abstract fun toiletDao(): ToiletDao
     abstract fun photoDao(): PhotoDao

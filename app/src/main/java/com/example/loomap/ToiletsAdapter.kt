@@ -18,7 +18,7 @@ class ToiletsAdapter(
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val row = inflater.inflate(R.layout.row_toilets_list, parent, false)
-        row.toiletName.text = "${list[position].uid} ${list[position].name}"
+        row.toiletName.text = list[position].name
         row.toiletCategory.text = list[position].category
         row.toiletRating.rating = when (ratings[position] != null) {
             true -> ratings[position]!!

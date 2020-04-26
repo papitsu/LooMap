@@ -46,4 +46,7 @@
     <string name="search_hint">Search toilets</string>
     <string name="new_toilet_snippet">Add a new toilet</string>
     <string name="toilet_name_string">%1$s (%2$s)</string>
+
+    // Marker color
+    <string name="marker_color">188</string>
 </resources>
