@@ -411,7 +411,7 @@ class SettingsActivity : AppCompatActivity() {
             )
             db.visitDao().insert(visit)
 
-            
+
 
             toilet = Toilet(
                 null,
