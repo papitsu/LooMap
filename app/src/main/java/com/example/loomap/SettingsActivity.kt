@@ -213,8 +213,8 @@ class SettingsActivity : AppCompatActivity() {
             toilet = Toilet(
                 null,
                 category = "public",
-                latitude = 65.054270,
-                longitude = 25.456271,
+                latitude = 65.011374,
+                longitude = 25.472696,
                 description = "Right in the center.",
                 name = "Valkea Top Floor"
             )
@@ -241,7 +241,150 @@ class SettingsActivity : AppCompatActivity() {
             db.visitDao().insert(visit)
 
 
-            
+            toilet = Toilet(
+                null,
+                category = "public",
+                latitude = 65.059564,
+                longitude = 25.478446,
+                description = "Always empty.",
+                name = "Caio"
+            )
+            lastToiletId = db.toiletDao().insert(toilet).toInt()
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-10-03 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap.",
+                rating = 2.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-10-10 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap.",
+                rating = 2.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-10-17 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap.",
+                rating = 2.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-10-24 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "The got soap!",
+                rating = 3.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-10-31 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap, again.",
+                rating = 2.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-11-07 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap.",
+                rating = 2.5.toFloat(),
+            photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-11-14 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap.",
+                rating = 2.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-11-21 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap.",
+                rating = 2.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-11-28 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap.",
+                rating = 2.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-11-28 20:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Out of soap.",
+                rating = 2.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+
+
+            toilet = Toilet(
+                null,
+                category = "private",
+                latitude = 65.008850,
+                longitude = 25.489064,
+                description = "",
+                name = "Kirsi's place"
+            )
+            lastToiletId = db.toiletDao().insert(toilet).toInt()
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-02-02 22:22")!!.time,
+                toiletId = lastToiletId,
+                comment = "Great place.",
+                rating = 4.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+            visit = Visit(
+                null,
+                time = format.parse("2020-02-03 08:14")!!.time,
+                toiletId = lastToiletId,
+                comment = "Not as nice this time round, needs some cleaning.",
+                rating = 3.5.toFloat(),
+                photoId = null
+            )
+            db.visitDao().insert(visit)
+
+
+
             toilet = Toilet(
                 null,
                 category = "public",
